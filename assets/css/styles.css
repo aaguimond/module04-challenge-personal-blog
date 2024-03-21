@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --backgroundc1: #f1dede;
+    --mainc1: #d496a7;
+    --mainc2: #5d576b;
+    --accent1: #6cd4ff;
+    --accent2: #fe938c;
+    background-color: var(--backgroundc1);
+}
+
+.header-wrapper {
+    display: flex;
+    padding: 0.5%;
+    border-bottom: 10px double var(--mainc2);
+}
+
+#title {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+.content {
+    min-height: 600px;
+    border-right: 5px solid var(--mainc1);
+    border-left: 5px solid var(--mainc1);
+}
+
+.footer-wrapper {
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    border-top: 5px double var(--mainc2);
+}
+
+.footer {
+    margin: 1%;
+}
+
+#portfolio {
+    text-decoration: none;
+    color: var(--mainc2);
+    background-color: var(--accent2);
+}
