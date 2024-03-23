@@ -50,6 +50,9 @@ header {
     border-radius: 50%;
     cursor: pointer;
     border: none;
+    position: absolute;
+    right: 16.3vh;
+    top: 2vh
 }
 
 #mode-toggle:hover {
@@ -133,7 +136,7 @@ header nav a {
 }
 
 .light-mode .content {
-    min-height: 82.386361vh;
+    min-height: 82.18096421vh;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
@@ -200,7 +203,6 @@ header nav a {
 }
 
 .light-mode .end-tag {
-    font-size: medium;
     align-content: center;
     color: var(--textc1);
     background-color: var(--accent2);
@@ -212,25 +214,41 @@ header nav a {
 }
 
 .light-mode #copyright {
-    font-size: small;
     align-content: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
 
 .dark-mode #copyright {
-    font-size: small;
     align-content: center;
     color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
-@media screen and (max-width:430px) {
-    .content {
-        min-height: 78vh;
+@media screen and (max-width:576px) {
+    .light-mode .content {
+        min-height: 82.8vh;
     }
+    .footer {
+        font-size: 2.3vh;
+    }
+
+    .end-tag {
+        font-size: 2.5vh;
+    }
+
+    #copyright {
+        font-size: 2vh;
+    }
+}
+
+@media screen and (max-width:430px) {
     #title {
         font-size: 5.5vh
+    }
+    #mode-toggle {
+        right: 13vh;
+        top: 2vh;
     }
     .back-btn {
         border: 0.6vh solid var(--mainc2);
@@ -251,9 +269,26 @@ header nav a {
     }
 }
 
+@media screen and (max-width:422px) {
+    .light-mode .content {
+        min-height: 82.8vh;
+    }
+    .footer {
+        font-size: 2.25vh;
+    }
+
+    .end-tag {
+        font-size: 2vh;
+    }
+
+    #copyright {
+        font-size: 1.5vh;
+    }
+}
+
 @media screen and (max-width:380px) {
-    .content {
-        min-height: 78.5vh;
+    .light-mode .content {
+        min-height: 83.5vh;
     }
     #title {
         font-size: 4.5vh;
@@ -264,14 +299,35 @@ header nav a {
     }
 }
 
-@media screen and (max-width:300px) {
-    .content {
-        min-height: 78.4vh;
+@media screen and (max-width:325px) {
+    .light-mode .content {
+        min-height: 84.2vh;
+    }
+    .footer {
+        font-size: 1.75vh;
+    }
+
+    .end-tag {
+        font-size: 1.5vh;
+    }
+
+    #copyright {
+        font-size: 1.25vh;
+    }
+}
+
+@media screen and (max-width:315px) {
+    .light-mode .content {
+        min-height: 84vh;
     }
     #title {
         font-size: 3vh;
         padding: 1.25vh;
         align-self: center;
+    }
+    #mode-toggle {
+        position: absolute;
+        right: 10vh;
     }
     .back-btn {
         font-size: 2vh;
@@ -282,6 +338,66 @@ header nav a {
     }
 }
 
-@media screen and (max-width:254px) {
+@media screen and (max-width:260px) {
+    .light-mode .content {
+        min-height: 84.21vh;
+    }
+    .footer {
+        font-size: 1.5vh;
+    }
 
+    .end-tag {
+        font-size: 1.25vh;
+    }
+
+    #copyright {
+        font-size: 1vh;
+    }
+}
+
+@media screen and (max-width:260px) {
+    .light-mode .content {
+        min-height: 84.3vh;
+    }
+    #title {
+        font-size: 2.75vh;
+    }
+}
+
+@media screen and (max-width:225px) {
+    .light-mode .content {
+        min-height: 84.5vh;
+    }
+    #title {
+        font-size: 2.5vh;
+    }
+    .footer {
+        font-size: 1.25vh;
+    }
+
+    .end-tag {
+        font-size: 1.1vh;
+    }
+
+    #copyright {
+        font-size: 1vh;
+    }
+}
+
+@media screen and (max-width:193px) {
+    .light-mode .content {
+        min-height: 83vh;
+    }
+}
+
+@media screen and (max-width:190px) {
+    .light-mode .content {
+        min-height: 80.6vh;
+    }
+}
+
+@media screen and (max-width:158px) {
+    .light-mode .content {
+        min-height: 77.8vh;
+    }
 }
