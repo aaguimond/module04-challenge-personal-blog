@@ -9,40 +9,107 @@
     --textc1: #28262b;
     --accent1: #6cd4ff;
     --accent2: #fe938c;
+}
+
+.light-mode {
     background-color: var(--backgroundc1);
-    transition: var(--backgroundc1) 0.5s, color 0.5s;
+    color: var(--textc1);
+}
+
+.dark-mode {
+    background-color: var(--textc1);
+    color: var(--backgroundc1);
 }
 
 header {
     min-height: 8.5vh;
-    background-color: var(--accent2);
     justify-content: space-between;
     align-content: center;
 }
 
-nav {
+.light-mode #title {
+    color: var(--textc1);
+    background-color: var(--accent2);
+}
+
+.dark-mode #title {
+    color: var(--accent2);
+    background-color: var(--mainc2);
+}
+
+.light-mode nav {
     background-color: var(--accent2);
     align-content: center
 }
 
-.mode-toggle {
-    padding: 1.75vh;
-    border-radius: 50%;
+.dark-mode nav {
     background-color: var(--mainc2);
+}
+
+#mode-toggle {
+    border-radius: 50%;
     cursor: pointer;
+    border: none;
 }
 
-#moon {
-    background-color: var(--backgroundc1);
+#mode-toggle:hover {
+    box-shadow: 0.5px 0.5px 15px var(--backgroundc1);
+    transition: 0.2s;
 }
 
-.back-btn {
+.light-mode #moon {
+    display: block;
     background-color: var(--accent2);
+    border-radius: 50%;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 3.1vh;
+}
+
+.dark-mode #moon {
+    display: none;
+}
+
+.light-mode #sun {
+    display: none;
+}
+
+.dark-mode #sun {
+    display: block;
+    background-color: var(--mainc2);
+    border-radius: 50%;
+    font-size: 4vh;
+    text-align: center;
+    line-height: 3.1vh;
+}
+
+.light-mode .back-btn {
+    background-color: var(--backgroundc1);
     border: 3px solid var(--mainc2);
+    color: var(--textc1);
     border-radius: 5px;
     position: relative;
-    top: 0.75vh;
+    top: -0.2vh;
     margin: 0 2vh 0 2vh;
+}
+
+.dark-mode .back-btn {
+    background-color: var(--textc1);
+    border: 3px solid var(--accent2);
+    color: var(--mainc1);
+}
+
+.light-mode .back-btn:hover {
+    background-color: var(--accent1);
+    box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
+    transition: 0.2s;
+}
+
+.dark-mode .back-btn:hover {
+    background-color: var(--accent2);
+    color: var(--textc1);
+    box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
+    transition: 0.2s;
 }
 
 header nav a {
@@ -53,26 +120,32 @@ header nav a {
     
 }
 
-.header-wrapper {
+.light-mode .header-wrapper {
     display: flex;
     padding: 0.5vh;
     border-bottom: 1.75vh ridge var(--mainc2);
     background-color: var(--accent2);
 }
 
-#title {
-    color: var(--textc1);
-    background-color: var(--accent2);
+.dark-mode .header-wrapper {
+    border-bottom: 1.75vh ridge var(--textc1);
+    background-color: var(--mainc2);
 }
 
-.content {
+.light-mode .content {
     min-height: 82.386361vh;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
 }
 
-.footer-wrapper {
+.dark-mode .content {
+    border-top: 0.4vh solid var(--mainc2);
+    border-right: 0.75vh solid var(--mainc2);
+    border-left: 0.75vh solid var(--mainc2);
+}
+
+.light-mode .footer-wrapper {
     position: sticky;
     bottom: 0px;
     display: flex;
@@ -80,7 +153,12 @@ header nav a {
     background-color: var(--accent2);
 }
 
-.footer {
+.dark-mode .footer-wrapper {
+    border-top: 1vh ridge var(--textc1);
+    background-color: var(--mainc2);
+}
+
+.light-mode .footer {
     margin: 1vh;
     width: 100%;
     display: flex;
@@ -88,37 +166,63 @@ header nav a {
     background-color: var(--accent2);
 }
 
-#portfolio-wrapper {
-    
+.dark-mode .footer {
+    background-color: var(--mainc2);
 }
 
-#portfolio {
+.light-mode #portfolio {
     text-decoration: none;
     font-style: oblique;
-    border: 0.6vh solid #5d576b;
+    border: 0.6vh solid var(--mainc2);
     border-radius: 5px;
     padding: 0.75vh;
     color: var(--textc1);
     background-color: var(--backgroundc1);
 }
 
-#portfolio:hover {
-    background-color: var(--accent1);
-    box-shadow: 2px 2px 5px var(--backgroundc1);
+.dark-mode #portfolio {
+    border: 0.6vh solid var(--accent2);
+    color: var(--mainc1);
+    background-color: var(--textc1);
 }
 
-.end-tag {
+.light-mode #portfolio:hover {
+    background-color: var(--accent1);
+    box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
+    transition: 0.2s;
+}
+
+.dark-mode #portfolio:hover {
+    background-color: var(--accent2);
+    color: var(--textc1);
+    box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
+    transition: 0.2s;
+}
+
+.light-mode .end-tag {
     font-size: medium;
     align-content: center;
     color: var(--textc1);
     background-color: var(--accent2);
 }
 
-#copyright {
+.dark-mode .end-tag {
+    color: var(--accent2);
+    background-color: var(--mainc2);
+}
+
+.light-mode #copyright {
     font-size: small;
     align-content: center;
     color: var(--mainc2);
     background-color: var(--accent2);
+}
+
+.dark-mode #copyright {
+    font-size: small;
+    align-content: center;
+    color: var(--mainc1);
+    background-color: var(--mainc2);
 }
 
 @media screen and (max-width:430px) {
@@ -170,8 +274,6 @@ header nav a {
         align-self: center;
     }
     .back-btn {
-        background-color: var(--accent2);
-        border: 3px solid var(--mainc2);
         font-size: 2vh;
         border-radius: 5px;
         position: relative;

@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./assets/css/styles.css"></link>
 </head>
 
-<body>
+<body class="light-mode">
     <header class="header-wrapper">
         <div>
             <h1 id="title">My Personal Blog</h1>
         </div>
         <nav>
-            <button class="mode-toggle"><i id="moon"></i></button>
-            <a class="back-btn" href="blog.html">Back</a>
+            <button id="mode-toggle"><span id="moon">&#127761</span><span id="sun">&#127774</span></button>
+            <a id="light-link" class="back-btn" href="blog.html">Back</a>
         </nav>
     </header>
 
@@ -23,6 +23,8 @@
 
         </div>
     </main>
+
+    <script src="assets/js/logic.js"></script>
 
     <footer class="footer-wrapper">
         <div class="footer">
