@@ -152,33 +152,54 @@ header nav a {
     border-left: 0.75vh solid var(--mainc2);
 }
 
-main div form div label {
+.light-mode main div form div label {
+    color: var(--textc1);
+}
+
+.dark-mode main div form div label {
     color: var(--accent2);
 }
 
-#username, #blog-title, #blog-content {
+.light-mode #username, .light-mode #blog-title, .light-mode #blog-content {
     display: flex;
-    background-color: var(--mainc2);
+    background-color: var(--accent2);
     width: 100%;
+}
+
+.dark-mode #username, .dark-mode #blog-title, .dark-mode #blog-content {
+    background-color: var(--mainc2);
 }
 
 #blog-content {
     min-height: 50vh;
 }
 
-main div form button {
+.light-mode main div form button {
     position: absolute;
     bottom: 10.1vh;
     left: 15%;
     width: 30%;
     height: 5.5vh;
+    background-color: var(--accent2);
+    color: var(--textc1);
+    border: 2px ridge var(--mainc2);
+}
+
+.dark-mode main div form button {
     background-color: var(--mainc2);
     color: var(--accent2);
     border: 2px ridge var(--accent2);
 }
 
-main div form button:hover {
+.light-mode main div form button:hover {
     cursor: pointer;
+    background-color: var(--accent1);
+    color: var(--textc1);
+    box-shadow: 0.5px 0.5px 5px var(--accent2);
+    transition: 0.2s;
+}
+
+.dark-mode main div form button:hover {
     background-color: var(--accent2);
     color: var(--textc1);
     box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
