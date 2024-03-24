@@ -19,6 +19,8 @@ const storedPostsString = localStorage.getItem('blogPosts');
 const blogPostsHTML = document.querySelector('.blog-posts');
 
 if (storedPostsString) {
+    document.getElementById('error-message').className = 'hidden';
+
     const blogPosts = JSON.parse(storedPostsString);
     blogPosts.forEach(post => {
         const postHTML = document.createElement('div');
@@ -29,7 +31,7 @@ if (storedPostsString) {
         titleHTML.setAttribute('id','post-title');
 
         const authorHTML = document.createElement('p');
-        authorHTML.textContent = post.username
+        authorHTML.textContent = 'Written by: ' + post.username;
         authorHTML.setAttribute('id','post-author');
 
         const contentHTML = document.createElement('p');
@@ -43,5 +45,5 @@ if (storedPostsString) {
         blogPostsHTML.appendChild(postHTML);
     });
 } else {
-    console.log('Please create a blog post')
+    document.getElementById('error-message').className = 'visible';
 }

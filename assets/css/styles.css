@@ -1,4 +1,5 @@
 * {
+    /*Global setting for border box, no margins or padding, font family, and colors*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,42 +13,51 @@
 }
 
 .light-mode {
+    /*This sets the default background and text colors for our light mode*/
     background-color: var(--backgroundc1);
     color: var(--textc1);
 }
 
 .dark-mode {
+    /*This sets the default background and text colors for our dark mode*/
     background-color: var(--textc1);
     color: var(--backgroundc1);
 }
 
 header {
+    /*This sets the minimum size of our header and where the content inside should be positioned*/
     min-height: 8.5vh;
     justify-content: space-between;
     align-content: center;
 }
 
 .light-mode #title {
+    /*This sets our title's colors and indent in light mode*/
     color: var(--mainc2);
     background-color: var(--accent2);
     margin-left:3vh;
 }
 
 .dark-mode #title {
+    /*Dark mode colors for title*/
     color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
 .light-mode nav {
+    /*The light mode background color for our nav elements and centering them*/
     background-color: var(--accent2);
     align-content: center
 }
 
 .dark-mode nav {
+    /*Dark mode background color for nav*/
     background-color: var(--mainc2);
 }
 
 #mode-toggle {
+    /*Setting the button poosition, appearance, and how our cursor interacts with our
+    light mode/dark mode toggle*/
     border-radius: 50%;
     cursor: pointer;
     border: none;
@@ -56,12 +66,19 @@ header {
     top: 2vh
 }
 
-#mode-toggle:hover {
-    box-shadow: 0.5px 0.5px 15px var(--backgroundc1);
+.light-mode #mode-toggle:hover {
+    /*Shadow on moon button mode toggle while in light mode */
+    box-shadow: 0.5px 0.5px 15px var(--textc1);
     transition: 0.2s;
 }
 
+.dark-mode #mode-toggle:hover {
+    /*Glow on sun button mode toggle while in dark mode */
+    box-shadow: 0.5px 0.5px 15px var(--backgroundc1);
+}
+
 .light-mode #moon {
+    /*The settings for our emoji moon mode toggle button while in light mode*/
     display: block;
     background-color: var(--accent2);
     border-radius: 50%;
@@ -71,14 +88,17 @@ header {
 }
 
 .dark-mode #moon {
+    /*Hides the moon in dark mode*/
     display: none;
 }
 
 .light-mode #sun {
+    /*Hides the sun in light mode*/
     display: none;
 }
 
 .dark-mode #sun {
+    /*The settings for our emoji moon mode toggle button while in light mode*/
     display: block;
     background-color: var(--mainc2);
     border-radius: 50%;
@@ -88,6 +108,7 @@ header {
 }
 
 .light-mode .back-btn {
+    /*Positioning and coloring our back button for light mode*/
     background-color: var(--backgroundc1);
     border: 3px solid var(--mainc2);
     color: var(--textc1);
@@ -98,18 +119,22 @@ header {
 }
 
 .dark-mode .back-btn {
+    /*Coloring our back button for dark mode*/
     background-color: var(--textc1);
     border: 3px solid var(--accent2);
     color: var(--mainc1);
 }
 
 .light-mode .back-btn:hover {
+    /*Changing the color of our back button and giving it a slight glow when hovered over in light mode*/
     background-color: var(--accent1);
     box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
     transition: 0.2s;
 }
 
 .dark-mode .back-btn:hover {
+    /*Changing the color of our back button and text and giving it a slight glow when
+    hovered over in dark mode*/
     background-color: var(--accent2);
     color: var(--textc1);
     box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
@@ -117,6 +142,7 @@ header {
 }
 
 header nav a {
+    /*Coloring the background and text for our back button, and making it not display as a link*/
     background-color: var(--accent2);
     color: var(--textc1);
     text-decoration: none;
@@ -125,6 +151,7 @@ header nav a {
 }
 
 .light-mode .header-wrapper {
+    /*Making our page header flex and giving it a border in light mode*/
     display: flex;
     padding: 0.5vh;
     border-bottom: 1.75vh ridge var(--mainc2);
@@ -132,19 +159,22 @@ header nav a {
 }
 
 .dark-mode .header-wrapper {
+    /*Giving our page header a border in dark mode*/
     border-bottom: 1.75vh ridge var(--textc1);
     background-color: var(--mainc2);
 }
 
 .light-mode .content {
+    /*Setting the height of our page body in light mode and giving it borders*/
     min-height: 82.18096421vh;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
-    border-bottom: 0.4vh solid var(--mainc1);
+    border-bottom: 0.1vh solid var(--mainc1);
 }
 
 .dark-mode .content {
+    /*Giving our page body borders in dark mode*/
     border-top: 0.4vh solid var(--mainc2);
     border-right: 0.75vh solid var(--mainc2);
     border-left: 0.75vh solid var(--mainc2);
@@ -152,6 +182,8 @@ header nav a {
 }
 
 .light-mode .blog-post {
+    /*Setting each blog post's sizing to fit snuggly within the content wrapper and
+    giving it a thin border*/
     width: 99%;
     margin: 1% 0.5% 1% 0.5%;
     padding: 1%;
@@ -159,41 +191,51 @@ header nav a {
 }
 
 .dark-mode .blog-post {
+    /*Changing the blog posts' border colors in dark mode*/
     border: 0.5vh solid var(--mainc2);
 }
 
 .light-mode #post-title {
+    /*Giving our blog post titles an underline, color, and slight indent*/
     text-decoration: underline;
     margin: 0 0.5vw 0 0.5vw;
     color: var(--textc1);
 }
 
-.dark-mode #post-title,
-.dark-mode #post-content {
+.dark-mode #post-title {
+    /*Changing the blog post title text color in dark mode*/
     color: var(--accent2);
 }
 
 .light-mode #post-author {
+    /*Changing our blog post author to be italic, giving it an indent and slight
+    separation from the content, and a different color than the surrounding text*/
     font-style: italic;
     margin: 1vh 2vw 2vh 2vw;
     color: var(--mainc2);
 }
 
 .dark-mode #post-author {
+    /*Changing the author text to be a different color than the surrounding text in dark mode*/
     color: var(--mainc1);
 }
 
 .light-mode #post-content {
+    /*Positioning the post content within its box, setting the line height to
+    make it more readable, and giving it color in light mode*/
     margin: 0 0.5vw 0 0.5vw;
     line-height: 1.4;
     color: var(--textc1);
 }
 
 .dark-mode #post-content {
+    /*Setting post content text color in dark mode*/
     color: var(--accent2);
 }
 
 .light-mode .footer-wrapper {
+    /*Making our footer sticky, positioned at the bottom of the viewport, giving it
+    a border, and coloring the background in light mode*/
     position: sticky;
     bottom: 0px;
     display: flex;
@@ -202,11 +244,14 @@ header nav a {
 }
 
 .dark-mode .footer-wrapper {
+    /*Changing the border and background color in dark mode*/
     border-top: 1vh ridge var(--textc1);
     background-color: var(--mainc2);
 }
 
 .light-mode .footer {
+    /*Setting the positioning properties for the child boxes in the footer, coloring
+    the background in light mode*/
     margin: 1vh;
     width: 100%;
     display: flex;
@@ -215,10 +260,12 @@ header nav a {
 }
 
 .dark-mode .footer {
+    /*Coloring the background in dark mode*/
     background-color: var(--mainc2);
 }
 
 .light-mode #portfolio {
+    /*Setting the appearance of the portfolio link button in light mode*/
     text-decoration: none;
     font-style: oblique;
     border: 0.6vh solid var(--mainc2);
@@ -229,18 +276,21 @@ header nav a {
 }
 
 .dark-mode #portfolio {
+    /*Changing the portfolio button's colors in dark mode*/
     border: 0.6vh solid var(--accent2);
     color: var(--mainc1);
     background-color: var(--textc1);
 }
 
 .light-mode #portfolio:hover {
+    /*Making the portfolio button change color and glow when hovered over in light mode*/
     background-color: var(--accent1);
     box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
     transition: 0.2s;
 }
 
 .dark-mode #portfolio:hover {
+    /*Making the portfolio button change color and glow when hovered over in dark mode*/
     background-color: var(--accent2);
     color: var(--textc1);
     box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
@@ -248,28 +298,64 @@ header nav a {
 }
 
 .light-mode .end-tag {
+    /*Setting the footer tag message's position and color in light mode*/
     align-content: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
 
 .dark-mode .end-tag {
+    /*Coloring the footer tag in dark mode*/
     color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
 .light-mode #copyright {
+    /*Setting the copyright's position and color in light mode*/
     align-content: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
 
 .dark-mode #copyright {
-    align-content: center;
+    /*Coloring the copyright in dark mode*/
     color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
+.light-mode #error-message {
+    /*Positioning and coloring the message that's displayed when no blog posts
+    are in local storage in light mode*/
+    text-align: center;
+    margin-top: 35vh;
+    color: var(--textc1)
+}
+
+.dark-mode #error-message {
+    /*Coloring the error message that's displayed when no blog posts are in
+    local storage in dark mode*/
+    color: var(--accent2)
+}
+
+.light-mode main div article h3 a {
+    /*Coloring the link to create a blog post in the error message while in light mode*/
+    color: #003cff;
+}
+
+.dark-mode main div article h3 a {
+    /*Coloring the link to create a blog post in the error message while in dark mode*/
+    color: var(--accent1);
+}
+
+.hidden {
+    /*When combined with our HTML and javascript, hiding the error message when there are
+    blog posts in local storage*/
+    display: none;
+}
+
+
+/*The following media queries are to fix formatting to cleanly display the page while in
+various window sizes*/
 @media screen and (max-width:576px) {
     .light-mode .content {
         min-height: 82.8vh;
