@@ -22,16 +22,19 @@ if (storedPostsString) {
     const blogPosts = JSON.parse(storedPostsString);
     blogPosts.forEach(post => {
         const postHTML = document.createElement('div');
-        postHTML.classList.add('blog-post');
+        postHTML.setAttribute('class','blog-post');
 
         const titleHTML = document.createElement('h2');
         titleHTML.textContent = post.title;
+        titleHTML.setAttribute('id','post-title');
 
         const authorHTML = document.createElement('p');
         authorHTML.textContent = post.username
+        authorHTML.setAttribute('id','post-author');
 
         const contentHTML = document.createElement('p');
         contentHTML.textContent = post.content;
+        contentHTML.setAttribute('id','post-content');
 
         postHTML.appendChild(titleHTML);
         postHTML.appendChild(authorHTML);

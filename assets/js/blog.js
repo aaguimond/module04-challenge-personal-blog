@@ -5,7 +5,7 @@ if (currentMode) {
     document.body.classList.add(currentMode);
 }
 
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 
     let mode = 'light-mode';
@@ -15,29 +15,35 @@ toggleBtn.addEventListener('click', () => {
     localStorage.setItem('mode', mode);
 });
 
+const storedPostsString = localStorage.getItem('blogPosts');
+let blogPosts = storedPostsString
+if (storedPostsString) { 
+    blogPosts = JSON.parse(storedPostsString);
+ } else {
+    blogPosts = [];
+ }
+
 const submissionForm = document.getElementById('submission-form')
 
-submissionForm.addEventListener('submit', (event) => {
+submissionForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const username = document.getElementById('username').value;
     const title = document.getElementById('blog-title').value;
     const content = document.getElementById('blog-content').value;
 
-    let blogPostsString = []
-
-    const blogData = {
+    const newPost = {
         username: username,
         title: title,
         content: content
     };
 
-    blogPostsString.push(blogData)
-    localStorage.setItem('blogPosts', JSON.stringify(blogPostsString));
+    blogPosts.push(newPost)
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
     if (document.getElementById('username').value !== null &&
         document.getElementById('blog-title').value !== null &&
         document.getElementById('blog-content').value !== null) {
             window.location.href = "index.html"
     }
-})
+});

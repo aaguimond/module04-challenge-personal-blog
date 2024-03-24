@@ -28,13 +28,13 @@ header {
 }
 
 .light-mode #title {
-    color: var(--textc1);
+    color: var(--mainc2);
     background-color: var(--accent2);
     margin-left: 3vh;
 }
 
 .dark-mode #title {
-    color: var(--accent2);
+    color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
@@ -179,6 +179,7 @@ header nav a {
 
 .dark-mode #username, .dark-mode #blog-title, .dark-mode #blog-content {
     background-color: var(--mainc2);
+    color: var(--accent2)
 }
 
 #blog-content {
@@ -311,12 +312,12 @@ form {
 
 .light-mode .end-tag {
     align-content: center;
-    color: var(--textc1);
+    color: var(--mainc2);
     background-color: var(--accent2);
 }
 
 .dark-mode .end-tag {
-    color: var(--accent2);
+    color: var(--mainc1);
     background-color: var(--mainc2);
 }
 

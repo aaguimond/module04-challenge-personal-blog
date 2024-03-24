@@ -28,12 +28,13 @@ header {
 }
 
 .light-mode #title {
-    color: var(--textc1);
+    color: var(--mainc2);
     background-color: var(--accent2);
+    margin-left:3vh;
 }
 
 .dark-mode #title {
-    color: var(--accent2);
+    color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
@@ -140,17 +141,56 @@ header nav a {
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
+    border-bottom: 0.4vh solid var(--mainc1);
 }
 
 .dark-mode .content {
     border-top: 0.4vh solid var(--mainc2);
     border-right: 0.75vh solid var(--mainc2);
     border-left: 0.75vh solid var(--mainc2);
+    border-bottom: 0.1vh solid var(--mainc2);
 }
 
-.light-mode .blog-posts {
-    width: 100%;
-    
+.light-mode .blog-post {
+    width: 99%;
+    margin: 1% 0.5% 1% 0.5%;
+    padding: 1%;
+    border: 0.5vh solid var(--accent2);
+}
+
+.dark-mode .blog-post {
+    border: 0.5vh solid var(--mainc2);
+}
+
+.light-mode #post-title {
+    text-decoration: underline;
+    margin: 0 0.5vw 0 0.5vw;
+    color: var(--textc1);
+}
+
+.dark-mode #post-title,
+.dark-mode #post-content {
+    color: var(--accent2);
+}
+
+.light-mode #post-author {
+    font-style: italic;
+    margin: 1vh 2vw 2vh 2vw;
+    color: var(--mainc2);
+}
+
+.dark-mode #post-author {
+    color: var(--mainc1);
+}
+
+.light-mode #post-content {
+    margin: 0 0.5vw 0 0.5vw;
+    line-height: 1.4;
+    color: var(--textc1);
+}
+
+.dark-mode #post-content {
+    color: var(--accent2);
 }
 
 .light-mode .footer-wrapper {
@@ -209,12 +249,12 @@ header nav a {
 
 .light-mode .end-tag {
     align-content: center;
-    color: var(--textc1);
+    color: var(--mainc2);
     background-color: var(--accent2);
 }
 
 .dark-mode .end-tag {
-    color: var(--accent2);
+    color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
