@@ -172,6 +172,8 @@ header nav a {
 
 #blog-content {
     min-height: 50vh;
+    word-wrap: break-word;
+    overflow-y: auto;
 }
 
 .light-mode main div form button {
