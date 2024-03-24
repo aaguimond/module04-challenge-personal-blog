@@ -24,13 +24,16 @@ submissionForm.addEventListener('submit', (event) => {
     const title = document.getElementById('blog-title').value;
     const content = document.getElementById('blog-content').value;
 
+    let blogPostsString = []
+
     const blogData = {
         username: username,
         title: title,
         content: content
     };
 
-    localStorage.setItem('blogData', JSON.stringify(blogData));
+    blogPostsString.push(blogData)
+    localStorage.setItem('blogPosts', JSON.stringify(blogPostsString));
 
     if (document.getElementById('username').value !== null &&
         document.getElementById('blog-title').value !== null &&

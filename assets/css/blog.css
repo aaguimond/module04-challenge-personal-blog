@@ -53,9 +53,13 @@ header {
     border: none;
 }
 
-#mode-toggle:hover {
-    box-shadow: 0.5px 0.5px 15px var(--backgroundc1);
+.light-mode #mode-toggle:hover {
+    box-shadow: 0.5px 0.5px 15px var(--textc1);
     transition: 0.2s;
+}
+
+.dark-mode #mode-toggle:hover {
+    box-shadow: 0.5px 0.5px 15px var(--backgroundc1);
 }
 
 .light-mode #moon {
@@ -239,6 +243,16 @@ form {
 .form-group-b {
     height: 50%;
     margin: 2vh 1vh 5vh 2vh;
+}
+
+.light-mode main div form div input,
+.light-mode main div form div textarea {
+    color: var(--textc1);
+}
+
+.dark-mode main div form div input,
+.dark-mode main div form div textarea {
+    color: var(--backgroundc1);
 }
 
 .light-mode .footer-wrapper {

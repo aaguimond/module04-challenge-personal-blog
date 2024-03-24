@@ -148,6 +148,11 @@ header nav a {
     border-left: 0.75vh solid var(--mainc2);
 }
 
+.light-mode .blog-posts {
+    width: 100%;
+    
+}
+
 .light-mode .footer-wrapper {
     position: sticky;
     bottom: 0px;

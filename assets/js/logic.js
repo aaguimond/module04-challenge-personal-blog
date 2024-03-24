@@ -14,3 +14,31 @@ toggleBtn.addEventListener('click', () => {
     } 
     localStorage.setItem('mode', mode);
 });
+
+const storedPostsString = localStorage.getItem('blogPosts');
+const blogPostsHTML = document.querySelector('.blog-posts');
+
+if (storedPostsString) {
+    const blogPosts = JSON.parse(storedPostsString);
+    blogPosts.forEach(post => {
+        const postHTML = document.createElement('div');
+        postHTML.classList.add('blog-post');
+
+        const titleHTML = document.createElement('h2');
+        titleHTML.textContent = post.title;
+
+        const authorHTML = document.createElement('p');
+        authorHTML.textContent = post.username
+
+        const contentHTML = document.createElement('p');
+        contentHTML.textContent = post.content;
+
+        postHTML.appendChild(titleHTML);
+        postHTML.appendChild(authorHTML);
+        postHTML.appendChild(contentHTML);
+
+        blogPostsHTML.appendChild(postHTML);
+    });
+} else {
+    console.log('Please create a blog post')
+}
