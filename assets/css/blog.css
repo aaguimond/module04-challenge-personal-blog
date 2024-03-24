@@ -135,7 +135,7 @@ header nav a {
 
 .content-wrapper {
     display: block;
-    width: 60%;
+    width: 99%;
     height: 79.8vh
 }
 
@@ -163,6 +163,13 @@ header nav a {
 .light-mode #username, .light-mode #blog-title, .light-mode #blog-content {
     display: flex;
     background-color: var(--accent2);
+}
+
+.light-mode #username, .light-mode #blog-title {
+    width: 50%;
+}
+
+.light-mode #blog-content {
     width: 100%;
 }
 
@@ -179,8 +186,8 @@ header nav a {
 .light-mode main div form button {
     position: absolute;
     bottom: 10.1vh;
-    left: 15%;
-    width: 30%;
+    left: 32%;
+    width: 33%;
     height: 5.5vh;
     background-color: var(--accent2);
     color: var(--textc1);
@@ -315,11 +322,6 @@ form {
     .content-wrapper {
         width: 97vw;
     }
-
-    .form-group-a {
-        width: 50vw;
-    }
-
     main div form button {
         left: 35vw;
         width: 30vw;
@@ -342,11 +344,6 @@ form {
         width: 97vw;
         height: 75vh
     }
-
-    .form-group-a {
-        width: 50vw;
-    }
-
     main div form button {
         left: 35vw;
         width: 30vw;
@@ -360,19 +357,14 @@ form {
     #title {
         font-size: 4.75vh;
     }
-    .form-group-a {
-        width: 45vw;
-    }
     .footer {
         font-size: 2.5vh;
         margin: 0.5vh 0 0 0;
         display: block;
     }
-
     .end-tag {
         font-size: 2.25vh;
     }
-
     #copyright {
         font-size: 2vh;
     }
@@ -400,9 +392,6 @@ form {
     .back-btn {
         font-size: 2vh;
     }
-    .form-group-a {
-        width: 40vw;
-    }
     .form-group-b {
         width: 92vw;
     }
@@ -423,16 +412,17 @@ form {
     .back-btn {
         font-size: 2.4vh;
     }
+    .form-group-a {
+        width: 90%;
+    }
     .footer {
         font-size: 1.8vh;
         margin: 0.5vh 0 0 0;
         display: block;
     }
-
     .end-tag {
         font-size: 2vh;
     }
-
     #copyright {
         font-size: 1.5vh;
     }
@@ -454,6 +444,9 @@ form {
     .back-btn {
         font-size: 2vh;
     }
+    .form-group-a {
+        width: 80%;
+    }
     .form-group-b {
         width: 91vw;
     }
@@ -474,7 +467,7 @@ form {
 
 @media screen and (max-width:305px) {
     .light-mode .content {
-        min-height: 82.7vh;
+        min-height: 84vh;
     }
     #title {
         font-size: 2.75vh;
@@ -488,11 +481,21 @@ form {
         top: 0.5vh;
         margin: 0 0 0 1vh;
     }
+    .light-mode #username, .light-mode #blog-title {
+        width: 100%;
+    }
     .form-group-a {
-        width: 35vw;
+        width: 90%;
     }
     .form-group-b {
-        width: 90vw;
+        width: 88vw;
+    }
+    .light-mode main div form button {
+        position: absolute;
+        bottom: 10.5vh;
+    }
+    .sidebar {
+        display: none;
     }
     .end-tag {
         font-size: 1.5vh
@@ -505,40 +508,59 @@ form {
 
 @media screen and (max-width:290px) {
     .light-mode .content {
-        min-height: 83.5vh;
+        min-height: 84vh;
     }
     #title {
         font-size: 2.5vh;
+    }
+    .light-mode main div form button {
+        position: absolute;
+        bottom: 9.75vh;
+        height: 5vh
+    }
+}
+
+@media screen and (max-width:254px) {
+    .content-wrapper {
+        height: 75vh
+    }
+    .form-group-a {
+        width: 86vw;
+    }
+    .form-group-b {
+        width: 86vw;;
     }
 }
 
 @media screen and (max-width:253px) {
     .light-mode .content {
-        min-height: 81.4vh;
+        min-height: 81.9vh;
     }
     .content-wrapper {
-        height: 75vh
+        height: 75vh;
+        width: 90vw
+    }
+    .form-group-a {
+        width: 83vw;
     }
     .form-group-b {
-        width: 88vw;;
+        width: 83vw;;
+    }
+    .light-mode main div form button {
+        position: absolute;
+        bottom: 10.75vh;
+        height: 5vh
     }
 }
 
-
-@media screen and (max-width:234px) {
+@media screen and (max-width:237px) {
     .light-mode .content {
-        min-height: 78.6vh;
-    }
-    #blog-content {
-        min-height: 48vh;
-    }
-    .form-group-b {
-        width: 85vw;
+        min-height: 81vh;
     }
 }
 
 @media screen and (max-width:171px) {
     .light-mode .content {
-        min-height: 76.5vh;
+        min-height: 78.9vh;
     }
 }
