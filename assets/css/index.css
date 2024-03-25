@@ -231,7 +231,7 @@ header nav a {
 .light-mode main div form button {
     /*Setting the position and colors of our submit button in light mode*/
     position: absolute;
-    bottom: 10.1vh;
+    bottom: 10.5vh;
     left: 32%;
     width: 33%;
     height: 5.5vh;
@@ -299,14 +299,19 @@ form {
 
 .form-group-a {
     /*Giving our username and title inputs height and positioning*/
-    height: 5%;
-    margin: 2vh 1vh 8vh 2vh;
+    height: 6%;
+    margin: 2vh 1vh 7vh 2vh;
 }
 
 .form-group-b {
     /*Giving our blog content input height and positioning*/
     height: 50%;
     margin: 2vh 1vh 5vh 2vh;
+}
+
+.light-mode main div form div input {
+    /*Making username and title text input boxes larger vertically*/
+    height: 100%
 }
 
 .light-mode main div form div input,
@@ -659,5 +664,8 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 @media screen and (max-width:171px) {
     .light-mode .content {
         min-height: 78.9vh;
+    }
+    .light-mode main div form button {
+        bottom: 12.5vh;
     }
 }
