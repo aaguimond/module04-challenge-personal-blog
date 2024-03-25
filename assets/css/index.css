@@ -1,5 +1,5 @@
 * {
-    /*Global setting for border box, no margins or padding, font family, and colors*/
+    /*Global setting for our boxes, margins, paddings, fonts, and colors*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,19 +13,19 @@
 }
 
 .light-mode {
-    /*This sets the default background and text colors for our light mode*/
+    /*Setting our default background and text colors in light mode*/
     background-color: var(--backgroundc1);
     color: var(--textc1);
 }
 
 .dark-mode {
-    /*This sets the default background and text colors for our dark mode*/
+    /*Setting our default background and text colors in dark mode*/
     background-color: var(--textc1);
     color: var(--backgroundc1);
 }
 
 header {
-    /*This sets the minimum size of our header and where the content inside should be positioned*/
+    /*Setting the position for our header and the content in it*/
     min-height: 8.5vh;
     justify-content: space-between;
     align-content: center;
@@ -35,7 +35,7 @@ header {
     /*This sets our title's colors and indent in light mode*/
     color: var(--mainc2);
     background-color: var(--accent2);
-    margin-left:3vh;
+    margin-left: 3vh;
 }
 
 .dark-mode #title {
@@ -56,18 +56,15 @@ header {
 }
 
 #mode-toggle {
-    /*Setting the button poosition, appearance, and how our cursor interacts with our
-    light mode/dark mode toggle*/
+    /*Setting the appearance, and how our cursor interacts with our light mode/
+    dark mode toggle*/
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    position: absolute;
-    right: 16.3vh;
-    top: 2vh
 }
 
 .light-mode #mode-toggle:hover {
-    /*Shadow on moon button mode toggle while in light mode */
+    /*Shadow on moon button mode toggle while in light mode */   
     box-shadow: 0.5px 0.5px 15px var(--textc1);
     transition: 0.2s;
 }
@@ -164,13 +161,19 @@ header nav a {
     background-color: var(--mainc2);
 }
 
+.content-wrapper {
+    /*Setting the content wrapper's size*/
+    display: block;
+    width: 99%;
+    height: 79.8vh
+}
+
 .light-mode .content {
     /*Setting the height of our page body in light mode and giving it borders*/
     min-height: 82.18096421vh;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
-    border-bottom: 0.1vh solid var(--mainc1);
 }
 
 .dark-mode .content {
@@ -178,59 +181,128 @@ header nav a {
     border-top: 0.4vh solid var(--mainc2);
     border-right: 0.75vh solid var(--mainc2);
     border-left: 0.75vh solid var(--mainc2);
-    border-bottom: 0.1vh solid var(--mainc2);
 }
 
-.light-mode .blog-post {
-    /*Setting each blog post's sizing to fit snuggly within the content wrapper and
-    giving it a thin border*/
-    width: 99%;
-    margin: 1% 0.5% 1% 0.5%;
-    padding: 1%;
-    border: 0.5vh solid var(--accent2);
-}
-
-.dark-mode .blog-post {
-    /*Changing the blog posts' border colors in dark mode*/
-    border: 0.5vh solid var(--mainc2);
-}
-
-.light-mode #post-title {
-    /*Giving our blog post titles an underline, color, and slight indent*/
-    text-decoration: underline;
-    margin: 0 0.5vw 0 0.5vw;
+.light-mode main div form div label {
+    /*Coloring the text for our form labels in light mode*/
     color: var(--textc1);
 }
 
-.dark-mode #post-title {
-    /*Changing the blog post title text color in dark mode*/
+.dark-mode main div form div label {
+    /*Coloring the text for our form labels in dark mode*/
     color: var(--accent2);
 }
 
-.light-mode #post-author {
-    /*Changing our blog post author to be italic, giving it an indent and slight
-    separation from the content, and a different color than the surrounding text*/
-    font-style: italic;
-    margin: 1vh 2vw 2vh 2vw;
-    color: var(--mainc2);
+.light-mode #username, .light-mode #blog-title, .light-mode #blog-content {
+    /*Displaying our form labels and inputs in flex positioning and coloring the backgrounds
+    in light mode*/
+    display: flex;
+    background-color: var(--accent2);
 }
 
-.dark-mode #post-author {
-    /*Changing the author text to be a different color than the surrounding text in dark mode*/
-    color: var(--mainc1);
+.light-mode #username, .light-mode #blog-title {
+    /*Making our username and title inputs half of their boxes by default*/
+    width: 50%;
 }
 
-.light-mode #post-content {
-    /*Positioning the post content within its box, setting the line height to
-    make it more readable, and giving it color in light mode*/
-    margin: 0 0.5vw 0 0.5vw;
-    line-height: 1.4;
+.light-mode #blog-content {
+    /*Setting our content input to fill all of its box*/
+    width: 100%;
+}
+
+.dark-mode #username, .dark-mode #blog-title, .dark-mode #blog-content {
+    /*Coloring our labels in dark mode*/
+    background-color: var(--mainc2);
+    color: var(--accent2)
+}
+
+#blog-content {
+    /*Making our content box large, making sure that entered text wraps to a new line
+    instead of continuing past the boundaries, and letting entered text stay within the
+    vertical bounds of the input box*/
+    min-height: 50vh;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+.light-mode main div form button {
+    /*Setting the position and colors of our submit button in light mode*/
+    position: absolute;
+    bottom: 10.1vh;
+    left: 32%;
+    width: 33%;
+    height: 5.5vh;
+    background-color: var(--accent2);
+    color: var(--textc1);
+    border: 2px ridge var(--mainc2);
+}
+
+.dark-mode main div form button {
+    /*Setting our submit button's colors in dark mode*/
+    background-color: var(--mainc2);
+    color: var(--accent2);
+    border: 2px ridge var(--accent2);
+}
+
+.light-mode main div form button:hover {
+    /*Making our submit button change the cursor to a finger, changing its color, and making
+    it glow when hovered over in light mode*/
+    cursor: pointer;
+    background-color: var(--accent1);
+    color: var(--textc1);
+    box-shadow: 0.5px 0.5px 5px var(--accent2);
+    transition: 0.2s;
+}
+
+.dark-mode main div form button:hover {
+    /*Changing the color and making our submit button glow while in dark mode*/
+    background-color: var(--accent2);
+    color: var(--textc1);
+    box-shadow: 0.5px 0.5px 5px var(--backgroundc1);
+    transition: 0.2s;
+}
+
+form, .sidebar {
+    /*Positioning our decorative sidebar*/
+    display: inline;
+}
+
+form {
+    /*Having our blog form fill its box entirely*/
+    height: 100%;
+}
+
+.sidebar {
+    /*Positioning our sidebar within the space its allowed*/
+    display: inline-block;
+    position: absolute;
+    right: 2.5vh;
+    top: 11vh;
+    height: 18%;
+}
+
+.form-group-a {
+    /*Giving our username and title inputs height and positioning*/
+    height: 5%;
+    margin: 2vh 1vh 5vh 2vh;
+}
+
+.form-group-b {
+    /*Giving our blog content input height and positioning*/
+    height: 50%;
+    margin: 2vh 1vh 5vh 2vh;
+}
+
+.light-mode main div form div input,
+.light-mode main div form div textarea {
+    /*Setting the text color for our inputs in light mode*/
     color: var(--textc1);
 }
 
-.dark-mode #post-content {
-    /*Setting post content text color in dark mode*/
-    color: var(--accent2);
+.dark-mode main div form div input,
+.dark-mode main div form div textarea {
+    /*Setting the text color for our inputs in dark mode*/
+    color: var(--backgroundc1);
 }
 
 .light-mode .footer-wrapper {
@@ -318,230 +390,257 @@ header nav a {
 }
 
 .dark-mode #copyright {
-    /*Coloring the copyright in dark mode*/
+   /*Coloring the copyright in dark mode*/
+    align-content: center;
     color: var(--mainc1);
     background-color: var(--mainc2);
 }
 
-.light-mode #error-message {
-    /*Positioning and coloring the message that's displayed when no blog posts
-    are in local storage in light mode*/
-    text-align: center;
-    margin-top: 35vh;
-    color: var(--textc1)
-}
-
-.dark-mode #error-message {
-    /*Coloring the error message that's displayed when no blog posts are in
-    local storage in dark mode*/
-    color: var(--accent2)
-}
-
-.light-mode main div article h3 a {
-    /*Coloring the link to create a blog post in the error message while in light mode.
-    This custom color is to aid in visibility of the link.*/
-    color: #003cff;
-}
-
-.light-mode main div article h3 a:hover {
-    /*Slight glow while hovering in light mode*/
-    box-shadow: 0.5px 0.5px 5px var(--accent1);
-    transition: 0.2s;
-}
-
-.dark-mode main div article h3 a {
-    /*Coloring the link to create a blog post in the error message while in dark mode*/
-    color: var(--accent1);
-}
-
-.dark-mode main div article h3 a:hover {
-    /*Slight glow while hovering in dark mode*/
-    box-shadow: 0.5px 0.5px 5px var(--accent1);
-    transition: 0.2s;
-}
-
-.hidden {
-    /*When combined with our HTML and javascript, hiding the error message when there are
-    blog posts in local storage*/
-    display: none;
-}
-
-
 /*The following media queries are to fix formatting to cleanly display the page while in
-various window sizes*/
-@media screen and (max-width:576px) {
+various window sizes. The sidebar is hidden at screen widths of 305 pixels or fewer.*/
+@media screen and (max-width:720px) {
+    .content-wrapper {
+        width: 97vw;
+    }
+    main div form button {
+        left: 35vw;
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width:485px) {
     .light-mode .content {
-        min-height: 82.8vh;
+        min-height: 82.7vh;
+    }
+    #title {
+        font-size: 5vh;
+        margin-left: 1vh;
+    }
+    .form-group-b {
+        height: 7vh;
+        width: 93vw;
+    }
+    .content-wrapper {
+        width: 97vw;
+        height: 75vh
+    }
+    main div form button {
+        left: 35vw;
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width:463px) {
+    .light-mode .content {
+        min-height: 83.3vh;
+    }
+    #title {
+        font-size: 4.75vh;
     }
     .footer {
-        font-size: 2.3vh;
-    }
-
-    .end-tag {
         font-size: 2.5vh;
+        margin: 0.5vh 0 0 0;
+        display: block;
     }
-
+    .end-tag {
+        font-size: 2.25vh;
+    }
     #copyright {
         font-size: 2vh;
     }
 }
 
 @media screen and (max-width:430px) {
-    #title {
-        font-size: 5.5vh
-    }
     #mode-toggle {
-        right: 13vh;
-        top: 2vh;
+        right: 6vh;
     }
-    .back-btn {
-        border: 0.6vh solid var(--mainc2);
-        margin: 0.5vh
-    }
-    .footer {
-        margin: 0.5vh 0 0 0;
-        display: grid;
-        justify-content: center;
-    }
-
-    .end-tag {
-        justify-self: center;
-    }
-
-    #copyright {
-        justify-self: center;
+    #title {
+        font-size: 4.3vh;
+        margin-top: 0.5vh;
     }
 }
 
-@media screen and (max-width:422px) {
-    .light-mode .content {
-        min-height: 82.8vh;
+@media screen and (max-width:395px) {
+    #mode-toggle {
+        position: absolute;
+        right: 12.5vh;
     }
-    .footer {
-        font-size: 2.25vh;
+    #title {
+        font-size: 4vh;
+        margin-top: 0.5vh;
     }
-
-    .end-tag {
+    .back-btn {
         font-size: 2vh;
     }
-
-    #copyright {
-        font-size: 1.5vh;
+    .form-group-b {
+        width: 92vw;
     }
 }
 
 @media screen and (max-width:380px) {
     .light-mode .content {
-        min-height: 83.5vh;
+        min-height: 84vh;
+    }
+    #mode-toggle {
+        position: absolute;
+        right: 13vh;
     }
     #title {
-        font-size: 4.5vh;
+        font-size: 3.5vh;
         padding: 0.25vh
     }
     .back-btn {
         font-size: 2.4vh;
     }
-}
-
-@media screen and (max-width:325px) {
-    .light-mode .content {
-        min-height: 84.2vh;
+    .form-group-a {
+        width: 90%;
     }
     .footer {
-        font-size: 1.75vh;
+        font-size: 1.8vh;
+        margin: 0.5vh 0 0 0;
+        display: block;
+    }
+    .end-tag {
+        font-size: 2vh;
+    }
+    #copyright {
+        font-size: 1.5vh;
+    }
+}
+
+@media screen and (max-width:335px) {
+    .content {
+        min-height: 79vh;
+    }
+    #mode-toggle {
+        position: absolute;
+        right: 12vh;
+    }
+    #title {
+        font-size: 3vh;
+        margin-top: 1vh;
+        padding: 0.25vh
+    }
+    .back-btn {
+        font-size: 2vh;
+    }
+    .form-group-a {
+        width: 80%;
+    }
+    .form-group-b {
+        width: 91vw;
+    }
+    .footer {
+        margin: 0.5vh 0 0 0;
+        display: block;
     }
 
     .end-tag {
-        font-size: 1.5vh;
+        font-size: 1.8vh
     }
 
     #copyright {
-        font-size: 1.25vh;
+        max-width: 10%;
+        font-size: 1.5vh;
     }
 }
 
-@media screen and (max-width:315px) {
+@media screen and (max-width:305px) {
     .light-mode .content {
         min-height: 84vh;
     }
     #title {
-        font-size: 3vh;
-        padding: 1.25vh;
+        font-size: 2.75vh;
+        padding: 0vh;
         align-self: center;
-    }
-    #mode-toggle {
-        position: absolute;
-        right: 10vh;
     }
     .back-btn {
         font-size: 2vh;
         border-radius: 5px;
         position: relative;
         top: 0.5vh;
-        margin: 0 0 0 2vh;
+        margin: 0 0 0 1vh;
     }
-}
-
-@media screen and (max-width:260px) {
-    .light-mode .content {
-        min-height: 84.21vh;
+    .light-mode #username, .light-mode #blog-title {
+        width: 100%;
     }
-    .footer {
-        font-size: 1.5vh;
+    .form-group-a {
+        width: 90%;
     }
-
+    .form-group-b {
+        width: 88vw;
+    }
+    .light-mode main div form button {
+        position: absolute;
+        bottom: 10.5vh;
+    }
+    .sidebar {
+        display: none;
+    }
     .end-tag {
-        font-size: 1.25vh;
+        font-size: 1.5vh
     }
-
     #copyright {
+        max-width: 10%;
         font-size: 1vh;
     }
 }
 
-@media screen and (max-width:260px) {
+@media screen and (max-width:290px) {
     .light-mode .content {
-        min-height: 84.3vh;
-    }
-    #title {
-        font-size: 2.75vh;
-    }
-}
-
-@media screen and (max-width:225px) {
-    .light-mode .content {
-        min-height: 84.5vh;
+        min-height: 84vh;
     }
     #title {
         font-size: 2.5vh;
     }
-    .footer {
-        font-size: 1.25vh;
-    }
-
-    .end-tag {
-        font-size: 1.1vh;
-    }
-
-    #copyright {
-        font-size: 1vh;
+    .light-mode main div form button {
+        position: absolute;
+        bottom: 9.75vh;
+        height: 5vh
     }
 }
 
-@media screen and (max-width:193px) {
-    .light-mode .content {
-        min-height: 83vh;
+@media screen and (max-width:254px) {
+    .content-wrapper {
+        height: 75vh
+    }
+    .form-group-a {
+        width: 86vw;
+    }
+    .form-group-b {
+        width: 86vw;;
     }
 }
 
-@media screen and (max-width:190px) {
+@media screen and (max-width:253px) {
     .light-mode .content {
-        min-height: 80.6vh;
+        min-height: 81.9vh;
+    }
+    .content-wrapper {
+        height: 75vh;
+        width: 90vw
+    }
+    .form-group-a {
+        width: 83vw;
+    }
+    .form-group-b {
+        width: 83vw;;
+    }
+    .light-mode main div form button {
+        position: absolute;
+        bottom: 10.75vh;
+        height: 5vh
     }
 }
 
-@media screen and (max-width:158px) {
+@media screen and (max-width:237px) {
     .light-mode .content {
-        min-height: 77.8vh;
+        min-height: 81vh;
+    }
+}
+
+@media screen and (max-width:171px) {
+    .light-mode .content {
+        min-height: 78.9vh;
     }
 }

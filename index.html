@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Blog</title>
-    <link rel="stylesheet" href="./assets/css/styles.css"></link>
+    <link rel="stylesheet" href="./assets/css/index.css"></link>
 </head>
 
 <body class="light-mode">
     <header class="header-wrapper">
         <div>
-            <h1 id="title">My Personal Blog</h1>
+            <h1 id="title">What's On Your Mind?</h1>
         </div>
         <nav>
             <button id="mode-toggle"><span id="moon">&#127762</span><span id="sun">&#127774</span></button>
-            <a id="light-link" class="back-btn" href="blog.html">Back</a>
+            <a id="light-link" class="back-btn" href="blog.html">To Blog</a>
         </nav>
     </header>
 
     <main class="content">
         <div class="content-wrapper">
-            <article class="blog-posts">
-                <h3 id="error-message" class="visible">Please make a blog post <a href="./blog.html">here</a>.</h3>
-
-            </article>
+            <form id="submission-form">
+                <div class="form-group-a">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="form-group-a">
+                    <label for="blog-title">Title:</label>
+                    <input type="text" id="blog-title" name="blog-title" required autocomplete="off">
+                </div>
+                <div class="form-group-b">
+                    <label for="blog-content">Content:</label>
+                    <textarea id="blog-content" name="blog-content" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </div>
+        <aside class="sidebar">
+            This is the sidebar
+        </aside>
     </main>
 
-    <script src="assets/js/logic.js"></script>
+    <script src="assets/js/index.js"></script>
 
     <footer class="footer-wrapper">
         <div class="footer">
