@@ -443,6 +443,14 @@ various window sizes*/
     }
 }
 
+@media screen and (max-width:345px) {
+    #title {
+        font-size: 3.5vh;
+        padding: 1.25vh;
+        align-self: center;
+    }
+}
+
 @media screen and (max-width:325px) {
     .light-mode .content {
         min-height: 84.2vh;
@@ -466,8 +474,7 @@ various window sizes*/
     }
     #title {
         font-size: 3vh;
-        padding: 1.25vh;
-        align-self: center;
+
     }
     #mode-toggle {
         position: absolute;

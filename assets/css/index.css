@@ -61,6 +61,9 @@ header {
     border-radius: 50%;
     cursor: pointer;
     border: none;
+    position: absolute;
+    right: 16.3vh;
+    top: 2vh
 }
 
 .light-mode #mode-toggle:hover {
@@ -451,9 +454,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:430px) {
-    #mode-toggle {
-        right: 6vh;
-    }
     #title {
         font-size: 4.3vh;
         margin-top: 0.5vh;
