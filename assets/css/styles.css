@@ -338,13 +338,26 @@ header nav a {
 }
 
 .light-mode main div article h3 a {
-    /*Coloring the link to create a blog post in the error message while in light mode*/
+    /*Coloring the link to create a blog post in the error message while in light mode.
+    This custom color is to aid in visibility of the link.*/
     color: #003cff;
+}
+
+.light-mode main div article h3 a:hover {
+    /*Slight glow while hovering in light mode*/
+    box-shadow: 0.5px 0.5px 5px var(--accent1);
+    transition: 0.2s;
 }
 
 .dark-mode main div article h3 a {
     /*Coloring the link to create a blog post in the error message while in dark mode*/
     color: var(--accent1);
+}
+
+.dark-mode main div article h3 a:hover {
+    /*Slight glow while hovering in dark mode*/
+    box-shadow: 0.5px 0.5px 5px var(--accent1);
+    transition: 0.2s;
 }
 
 .hidden {

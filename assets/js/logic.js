@@ -3,7 +3,7 @@ const toggleBtn = document.getElementById('mode-toggle');
 //This is a function using a ternary operator '?', or basically a functional phrase
 //that has three parts to it. It reads as [condition] ? [if true] : [if false].
 //It's first checking if the light/dark mode is stored in local storage. If it is,
-//then we grab the value from storage. If it's not, then it returns a falsy value of 'empty' essentially
+//then we grab the value from storage. If it's not, then it returns a falsy value of 'empty', essentially
 const currentMode = localStorage.getItem('mode') ? localStorage.getItem('mode') : null;
 //Below is an if statement stating that if we found a value for our light/dark mode
 //in local storage, then we add it as a class to our HTML body element
