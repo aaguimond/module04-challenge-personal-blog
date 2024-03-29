@@ -32,7 +32,7 @@
 
 ## Screenshots of Completed Site Build
 
-**Below is are screenshots of the page**
+**Below are screenshots of the page**
 
 Below are screenshots of the blog's landing page in light mode and in dark mode.
 
