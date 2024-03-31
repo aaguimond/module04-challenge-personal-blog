@@ -429,6 +429,15 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
     }
 }
 
+@media screen and (max-width:683px) {
+    .content-wrapper {
+        width: 95.5vw;
+    }
+    .footer {
+        height: 5.7vh
+    }
+}
+
 @media screen and (max-width:485px) {
     .light-mode .content {
         min-height: 82.7vh;
@@ -436,10 +445,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
     #title {
         font-size: 5vh;
         margin-left: 1vh;
-    }
-    .form-group-b {
-        height: 7vh;
-        width: 93vw;
     }
     .content-wrapper {
         width: 97vw;
@@ -453,12 +458,13 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 
 @media screen and (max-width:463px) {
     .light-mode .content {
-        min-height: 83.3vh;
+        min-height: 83vh;
     }
     #title {
         font-size: 4.75vh;
     }
     .footer {
+        height: 5.7vh;
         font-size: 2.5vh;
         margin: 0.5vh 0 0 0;
         display: block;
@@ -500,9 +506,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:380px) {
-    .light-mode .content {
-        min-height: 84vh;
-    }
     #mode-toggle {
         position: absolute;
         right: 13vh;
@@ -568,9 +571,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:305px) {
-    .light-mode .content {
-        min-height: 84vh;
-    }
     #title {
         font-size: 2.75vh;
         padding: 0vh;
@@ -609,9 +609,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:290px) {
-    .light-mode .content {
-        min-height: 84vh;
-    }
     #title {
         font-size: 2.5vh;
     }
@@ -635,9 +632,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:253px) {
-    .light-mode .content {
-        min-height: 81.9vh;
-    }
     .content-wrapper {
         height: 75vh;
         width: 90vw
