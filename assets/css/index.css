@@ -417,7 +417,7 @@ form {
     background-color: var(--mainc2);
 }
 
-/*The following media queries are to fix formatting to cleanly display the page while in
+/*The following media width queries are to fix formatting to cleanly display the page while in
 various window sizes. The sidebar is hidden at screen widths of 305 pixels or fewer.*/
 @media screen and (max-width:720px) {
     .content-wrapper {
@@ -661,5 +661,54 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
     }
     .light-mode main div form button {
         bottom: 12.5vh;
+    }
+}
+
+/*The following media height queries are to fix formatting to cleanly display the page while in
+various window sizes. The sidebar is hidden at screen widths of 305 pixels or fewer.*/
+@media screen and (max-height:565px) {
+    .light-mode .header-wrapper {
+        padding: 0.3vh;
+    }
+}
+@media screen and (max-height:550px) {
+    .light-mode .header-wrapper {
+        padding: 0vh;
+    }
+}
+@media screen and (max-height:526px) {
+    .light-mode .header-wrapper {
+        /*Making our page header flex and giving it a border in light mode*/
+        margin-bottom: -0.25vh;
+    }
+}
+@media screen and (max-height:518px) {
+    .light-mode .header-wrapper {
+        /*Making our page header flex and giving it a border in light mode*/
+        margin-bottom: -0.5vh;
+    }
+}
+@media screen and (max-height:503px) {
+    .light-mode .header-wrapper {
+        /*Making our page header flex and giving it a border in light mode*/
+        margin-bottom: -0.75vh;
+    }
+}
+@media screen and (max-height:474px) {
+    .light-mode .header-wrapper {
+        /*Making our page header flex and giving it a border in light mode*/
+        margin-bottom: -1vh;
+    }
+}
+@media screen and (max-height:466px) {
+    .light-mode .header-wrapper {
+        /*Making our page header flex and giving it a border in light mode*/
+        margin-bottom: -1.5vh;
+    }
+}
+@media screen and (max-height:445px) {
+    .light-mode .header-wrapper {
+        /*Making our page header flex and giving it a border in light mode*/
+        margin-bottom: -2vh;
     }
 }
