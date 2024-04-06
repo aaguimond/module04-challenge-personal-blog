@@ -28,14 +28,15 @@ header {
     /*Setting the position for our header and the content in it*/
     min-height: 8.5vh;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 }
 
 .light-mode #title {
     /*This sets our title's colors and indent in light mode*/
     color: var(--mainc2);
     background-color: var(--accent2);
-    margin-left: 3vh;
+    margin-left: 0.5vh;
+    font-size: 1.25em;
 }
 
 .dark-mode #title {
@@ -47,12 +48,13 @@ header {
 .light-mode nav {
     /*The light mode background color for our nav elements and centering them*/
     background-color: var(--accent2);
-    align-content: center
+
 }
 
 .dark-mode nav {
     /*Dark mode background color for nav*/
     background-color: var(--mainc2);
+    min-width: 32%;
 }
 
 #mode-toggle {
@@ -61,9 +63,7 @@ header {
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    position: absolute;
-    right: 16.3vh;
-    top: 2vh
+    margin: 0;
 }
 
 .light-mode #mode-toggle:hover {
@@ -113,9 +113,7 @@ header {
     border: 3px solid var(--mainc2);
     color: var(--textc1);
     border-radius: 5px;
-    position: relative;
-    top: -0.2vh;
-    margin: 0 2vh 0 2vh;
+    margin: -0.25vh 0.5vh 0 0;
 }
 
 .dark-mode .back-btn {
@@ -168,12 +166,12 @@ header nav a {
     /*Setting the content wrapper's size*/
     display: block;
     width: 99%;
-    height: 79.8vh
+    height: 85vh
 }
 
 .light-mode .content {
     /*Setting the height of our page body in light mode and giving it borders*/
-    min-height: 82.18096421vh;
+    min-height: 100%;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
@@ -230,10 +228,8 @@ header nav a {
 
 .light-mode main div form button {
     /*Setting the position and colors of our submit button in light mode*/
-    position: absolute;
-    bottom: 10.5vh;
-    left: 32%;
-    width: 33%;
+    margin: 1% 33.3% 0 33.3%;
+    width: 33.4%;
     height: 5.5vh;
     background-color: var(--accent2);
     color: var(--textc1);
@@ -334,6 +330,10 @@ form {
     display: flex;
     border-top: 1vh ridge var(--mainc2);
     background-color: var(--accent2);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+
 }
 
 .dark-mode .footer-wrapper {
@@ -349,6 +349,7 @@ form {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--accent2);
 }
 
@@ -360,12 +361,15 @@ form {
 .light-mode #portfolio {
     /*Setting the appearance of the portfolio link button in light mode*/
     text-decoration: none;
+    text-align: center;
+    align-content: center;
     font-style: oblique;
     border: 0.6vh solid var(--mainc2);
     border-radius: 5px;
     padding: 0.75vh;
     color: var(--textc1);
     background-color: var(--backgroundc1);
+    font-size: 16px;
 }
 
 .dark-mode #portfolio {
@@ -390,9 +394,9 @@ form {
     transition: 0.2s;
 }
 
-.light-mode .end-tag {
+.light-mode footer div h3 {
     /*Setting the footer tag message's position and color in light mode*/
-    align-content: center;
+    text-align: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
@@ -405,7 +409,7 @@ form {
 
 .light-mode #copyright {
     /*Setting the copyright's position and color in light mode*/
-    align-content: center;
+    text-align: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
@@ -442,26 +446,14 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
     .light-mode .content {
         min-height: 82.7vh;
     }
-    #title {
-        font-size: 5vh;
-        margin-left: 1vh;
-    }
     .content-wrapper {
         width: 97vw;
-        height: 75vh
-    }
-    main div form button {
-        left: 35vw;
-        width: 30vw;
     }
 }
 
 @media screen and (max-width:463px) {
     .light-mode .content {
-        min-height: 83vh;
-    }
-    #title {
-        font-size: 4.75vh;
+        min-height: 82.6vh;
     }
     .footer {
         height: 5.7vh;
@@ -470,7 +462,7 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
         display: block;
     }
     .end-tag {
-        font-size: 2.25vh;
+        font-size: 2.75vh;
     }
     #copyright {
         font-size: 2vh;
@@ -478,10 +470,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:430px) {
-    #title {
-        font-size: 4.3vh;
-        margin-top: 0.5vh;
-    }
     #sidebar {
         width: 32.5vh;
         right: 1vh;
@@ -489,14 +477,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:395px) {
-    #mode-toggle {
-        position: absolute;
-        right: 12.5vh;
-    }
-    #title {
-        font-size: 4vh;
-        margin-top: 0.5vh;
-    }
     .back-btn {
         font-size: 2vh;
     }
@@ -506,17 +486,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:380px) {
-    #mode-toggle {
-        position: absolute;
-        right: 13vh;
-    }
-    #title {
-        font-size: 3.5vh;
-        padding: 0.25vh
-    }
-    .back-btn {
-        font-size: 2.4vh;
-    }
     .form-group-a {
         width: 90%;
     }
@@ -526,7 +495,7 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
         display: block;
     }
     .end-tag {
-        font-size: 2vh;
+        font-size: 2.25vh;
     }
     #copyright {
         font-size: 1.5vh;
@@ -536,18 +505,6 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 @media screen and (max-width:335px) {
     .content {
         min-height: 79vh;
-    }
-    #mode-toggle {
-        position: absolute;
-        right: 12vh;
-    }
-    #title {
-        font-size: 3vh;
-        margin-top: 1vh;
-        padding: 0.25vh
-    }
-    .back-btn {
-        font-size: 2vh;
     }
     .form-group-a {
         width: 80%;
@@ -559,30 +516,19 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
         margin: 0.5vh 0 0 0;
         display: block;
     }
-
     .end-tag {
-        font-size: 1.8vh
+        font-size: 2.1vh
     }
-
     #copyright {
         max-width: 10%;
         font-size: 1.5vh;
     }
+    .light-mode #portfolio {
+        font-size: 1.25em;
+    }
 }
 
 @media screen and (max-width:305px) {
-    #title {
-        font-size: 2.75vh;
-        padding: 0vh;
-        align-self: center;
-    }
-    .back-btn {
-        font-size: 2vh;
-        border-radius: 5px;
-        position: relative;
-        top: 0.5vh;
-        margin: 0 0 0 1vh;
-    }
     .light-mode #username, .light-mode #blog-title {
         width: 100%;
     }
@@ -592,15 +538,11 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
     .form-group-b {
         width: 88vw;
     }
-    .light-mode main div form button {
-        position: absolute;
-        bottom: 10.5vh;
-    }
     #blog-accent-logo {
         display: none;
     }
     .end-tag {
-        font-size: 1.5vh
+        font-size: 1.7vh
     }
     #copyright {
         max-width: 10%;
@@ -610,19 +552,18 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 
 @media screen and (max-width:290px) {
     #title {
-        font-size: 2.5vh;
+        font-size: 1em !important;
     }
-    .light-mode main div form button {
-        position: absolute;
-        bottom: 9.75vh;
-        height: 5vh
+    header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .light-mode #portfolio {
+        font-size: 0.85em;
     }
 }
 
 @media screen and (max-width:254px) {
-    .content-wrapper {
-        height: 75vh
-    }
     .form-group-a {
         width: 86vw;
     }
@@ -632,20 +573,11 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
 }
 
 @media screen and (max-width:253px) {
-    .content-wrapper {
-        height: 75vh;
-        width: 90vw
-    }
     .form-group-a {
         width: 83vw;
     }
     .form-group-b {
         width: 83vw;;
-    }
-    .light-mode main div form button {
-        position: absolute;
-        bottom: 10.75vh;
-        height: 5vh
     }
 }
 

@@ -28,14 +28,15 @@ header {
     /*This sets the minimum size of our header and where the content inside should be positioned*/
     min-height: 8.5vh;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 }
 
 .light-mode #title {
     /*This sets our title's colors and indent in light mode*/
     color: var(--mainc2);
     background-color: var(--accent2);
-    margin-left:3vh;
+    margin-left: 0.5vh;
+    font-size: 1.25em;
 }
 
 .dark-mode #title {
@@ -47,27 +48,26 @@ header {
 .light-mode nav {
     /*The light mode background color for our nav elements and centering them*/
     background-color: var(--accent2);
-    align-content: center
+
 }
 
 .dark-mode nav {
     /*Dark mode background color for nav*/
     background-color: var(--mainc2);
+    min-width: 32%;
 }
 
 #mode-toggle {
-    /*Setting the button poosition, appearance, and how our cursor interacts with our
-    light mode/dark mode toggle*/
+    /*Setting the appearance, and how our cursor interacts with our light mode/
+    dark mode toggle*/
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    position: absolute;
-    right: 16.3vh;
-    top: 2vh
+    margin: 0;
 }
 
 .light-mode #mode-toggle:hover {
-    /*Shadow on moon button mode toggle while in light mode */
+    /*Shadow on moon button mode toggle while in light mode */   
     box-shadow: 0.5px 0.5px 15px var(--textc1);
     transition: 0.2s;
 }
@@ -113,9 +113,7 @@ header {
     border: 3px solid var(--mainc2);
     color: var(--textc1);
     border-radius: 5px;
-    position: relative;
-    top: -0.2vh;
-    margin: 0 2vh 0 2vh;
+    margin: -0.25vh 0.5vh 0 0;
 }
 
 .dark-mode .back-btn {
@@ -166,7 +164,7 @@ header nav a {
 
 .light-mode .content {
     /*Setting the height of our page body in light mode and giving it borders*/
-    min-height: 82.18096421vh;
+    min-height: 85vh;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
@@ -241,6 +239,10 @@ header nav a {
     display: flex;
     border-top: 1vh ridge var(--mainc2);
     background-color: var(--accent2);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+
 }
 
 .dark-mode .footer-wrapper {
@@ -256,6 +258,7 @@ header nav a {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--accent2);
 }
 
@@ -267,12 +270,15 @@ header nav a {
 .light-mode #portfolio {
     /*Setting the appearance of the portfolio link button in light mode*/
     text-decoration: none;
+    text-align: center;
+    align-content: center;
     font-style: oblique;
     border: 0.6vh solid var(--mainc2);
     border-radius: 5px;
     padding: 0.75vh;
     color: var(--textc1);
     background-color: var(--backgroundc1);
+    font-size: 16px;
 }
 
 .dark-mode #portfolio {
@@ -297,9 +303,9 @@ header nav a {
     transition: 0.2s;
 }
 
-.light-mode .end-tag {
+.light-mode footer div h3 {
     /*Setting the footer tag message's position and color in light mode*/
-    align-content: center;
+    text-align: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
@@ -312,13 +318,14 @@ header nav a {
 
 .light-mode #copyright {
     /*Setting the copyright's position and color in light mode*/
-    align-content: center;
+    text-align: center;
     color: var(--mainc2);
     background-color: var(--accent2);
 }
 
 .dark-mode #copyright {
-    /*Coloring the copyright in dark mode*/
+   /*Coloring the copyright in dark mode*/
+    align-content: center;
     color: var(--mainc1);
     background-color: var(--mainc2);
 }
@@ -390,10 +397,6 @@ various window sizes*/
     #title {
         font-size: 5.5vh
     }
-    #mode-toggle {
-        right: 13vh;
-        top: 2vh;
-    }
     .back-btn {
         border: 0.6vh solid var(--mainc2);
         margin: 0.5vh
@@ -415,12 +418,14 @@ various window sizes*/
 
 @media screen and (max-width:422px) {
     .light-mode .content {
-        min-height: 82.8vh;
+        min-height: 84vh;
     }
     .footer {
         font-size: 2.25vh;
     }
-
+    #portfolio {
+        font-size: 2.5vh !important;
+    }
     .end-tag {
         font-size: 2vh;
     }
@@ -458,11 +463,9 @@ various window sizes*/
     .footer {
         font-size: 1.75vh;
     }
-
     .end-tag {
-        font-size: 1.5vh;
+        font-size: 1.75vh;
     }
-
     #copyright {
         font-size: 1.25vh;
     }
@@ -476,16 +479,15 @@ various window sizes*/
         font-size: 3vh;
 
     }
-    #mode-toggle {
-        position: absolute;
-        right: 10vh;
-    }
     .back-btn {
         font-size: 2vh;
         border-radius: 5px;
         position: relative;
         top: 0.5vh;
         margin: 0 0 0 2vh;
+    }
+    .end-tag {
+        font-size: 1.55vh;
     }
 }
 
@@ -525,11 +527,9 @@ various window sizes*/
     .footer {
         font-size: 1.25vh;
     }
-
     .end-tag {
         font-size: 1.1vh;
     }
-
     #copyright {
         font-size: 1vh;
     }
