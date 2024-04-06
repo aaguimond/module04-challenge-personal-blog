@@ -239,10 +239,7 @@ header nav a {
     display: flex;
     border-top: 1vh ridge var(--mainc2);
     background-color: var(--accent2);
-    position: absolute;
     width: 100%;
-    bottom: 0px;
-
 }
 
 .dark-mode .footer-wrapper {

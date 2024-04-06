@@ -325,8 +325,6 @@ form {
 .light-mode .footer-wrapper {
     /*Making our footer sticky, positioned at the bottom of the viewport, giving it
     a border, and coloring the background in light mode*/
-    position: sticky;
-    bottom: 0px;
     display: flex;
     border-top: 1vh ridge var(--mainc2);
     background-color: var(--accent2);
