@@ -164,7 +164,7 @@ header nav a {
 
 .light-mode .content {
     /*Setting the height of our page body in light mode and giving it borders*/
-    min-height: 85vh;
+    min-height: 80vh;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
