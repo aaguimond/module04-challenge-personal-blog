@@ -166,12 +166,12 @@ header nav a {
     /*Setting the content wrapper's size*/
     display: block;
     width: 99%;
-    height: 85vh
+    height: 82.2vh
 }
 
 .light-mode .content {
     /*Setting the height of our page body in light mode and giving it borders*/
-    min-height: 100%;
+    min-height: 80%;
     border-top: 0.4vh solid var(--mainc1);
     border-right: 0.75vh solid var(--mainc1);
     border-left: 0.75vh solid var(--mainc1);
@@ -430,6 +430,12 @@ various window sizes. The sidebar is hidden at screen widths of 305 pixels or fe
         width: 30vw;
     }
 }
+
+@media screen and (max-width:683px) {
+    .content-wrapper {
+        min-height: 80.6vh;
+    }
+
 
 @media screen and (max-width:683px) {
     .content-wrapper {
